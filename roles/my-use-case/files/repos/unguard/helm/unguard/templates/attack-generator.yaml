@@ -42,9 +42,9 @@ spec:
             - name: USER_AUTH_SERVICE_ADDRESS
               value: "unguard-user-auth-service"
             - name: DT_RELEASE_VERSION
-              value: "{{ .Values.unguard.adService.tag }}"
+              value: "{{ .Values.unguard.maliciousLoadGenerator.tag }}"
             - name: DT_RELEASE_BUILD_VERSION
-              value: "{{ .Values.unguard.adService.tag }}"
+              value: "{{ .Values.unguard.maliciousLoadGenerator.tag }}"
             - name: DT_RELEASE_PRODUCT
               value: "{{ .Chart.Name }}"
             - name: DT_RELEASE_STAGE
