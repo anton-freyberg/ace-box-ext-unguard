@@ -1,5 +1,8 @@
 ---
 - include_role:
+    name: microk8s
+
+- include_role:
     name: app-unguard
 
 - include_role:
@@ -12,10 +15,6 @@
     git_org_name: "{{ demo_appsec_org }}"
     repo_name: "{{ demo_appsec_repo_name }}"
   when: new_repo_created is defined and new_repo_created == true
-
-- set_fact:
-    include_jenkins_value_file: "{{ role_path }}/templates/hot-appsec-jobs.yml.j2"
-
 
 - file:
     path: "/home/{{ ace_box_user }}/ansible/roles/dashboard/files/helm-values"
